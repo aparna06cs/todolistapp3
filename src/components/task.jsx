@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import TasksDivs from "./tasksdiv";
+import CalendarComponent from "./calendarTest";
+
 class TaskAdd extends Component {
   state = {
     taskcount: 0,
@@ -37,9 +39,8 @@ class TaskAdd extends Component {
 
   render() {
     return (
-      <div className="container" onLoad={this.handleDisableButton}>
-        <div className="col-sm-10 text-center">
-          <h1>Start your day by adding the tasks!!</h1>
+      <main className="container" onLoad={this.handleDisableButton}>
+        <div className="col-sm-10 text-left">
           <input
             type="text"
             id="task"
@@ -48,13 +49,15 @@ class TaskAdd extends Component {
           />
           <button
             onClick={this.handleAddTask}
-            className="btn btn-primary addTask"
+            className="btn btn-primary addTask m-3"
           >
             Add Task
           </button>
-          <div>{this.state.tasks}</div>
+
+          <CalendarComponent />
+          <div className="text-left">{this.state.tasks}</div>
         </div>
-      </div>
+      </main>
     );
   }
 }

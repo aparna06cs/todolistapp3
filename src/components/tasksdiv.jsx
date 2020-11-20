@@ -42,24 +42,29 @@ class TasksDivs extends Component {
     var divid = `divid_${this.state.taskcounter}`;
     var checkboxid = `checkboxid_${this.state.taskcounter}`;
     return (
-      <div className="text-center" id={divid}>
-        <span id={spandivid}>{this.state.taskvalue}</span>
-        <a
-          href="#"
-          className="m-2"
-          id={ahrefdivid}
-          _key
-          onClick={() => this.handleDeleteTask(this.state.taskcounter)}
-        >
-          <img src="deleteicon.png" className="deleteicon"></img>
-        </a>
-        <input
-          type="checkbox"
-          id={checkboxid}
-          className="text-center"
-          aria-label="Task Completed"
-          onChange={() => this.handleCompleteTask(this.state.taskcounter)}
-        />
+      <div className="text-left" id={divid}>
+        <div class="card-header">
+          <span id={spandivid} class="font-det m-5">
+            {this.state.taskvalue}
+          </span>
+
+          <a
+            href="#"
+            className="m-2"
+            id={ahrefdivid}
+            _key
+            onClick={() => this.handleDeleteTask(this.state.taskcounter)}
+          >
+            <img src="deleteicon.png" className="deleteicon"></img>
+          </a>
+          <input
+            type="checkbox"
+            id={checkboxid}
+            className="text-left"
+            aria-label="Task Completed"
+            onChange={() => this.handleCompleteTask(this.state.taskcounter)}
+          />
+        </div>
       </div>
     );
   }

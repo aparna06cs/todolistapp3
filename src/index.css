@@ -5,8 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 1800px;
+  background-image: url("./todolistimage.jpg") !important;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
-
+.font-det {
+  color: white;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
